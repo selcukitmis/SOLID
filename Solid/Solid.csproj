@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{B60B4039-5570-4F15-8A75-29CD1E662D14}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Solid</RootNamespace>
+    <AssemblyName>Solid</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Examples\1-SingleResponsibility\Employee.cs" />
+    <Compile Include="Examples\1-SingleResponsibility\ReportCreator.cs" />
+    <Compile Include="Examples\1-SingleResponsibility\EmployeeCreator.cs" />
+    <Compile Include="Examples\2-OpenClosed\Report.cs" />
+    <Compile Include="Examples\2-OpenClosed\CrystalReportGenerator.cs" />
+    <Compile Include="Examples\2-OpenClosed\PdfReportGenerator.cs" />
+    <Compile Include="Examples\3-LiskovSubstitution\IFlyer.cs" />
+    <Compile Include="Examples\3-LiskovSubstitution\Chicken.cs" />
+    <Compile Include="Examples\3-LiskovSubstitution\Bird.cs" />
+    <Compile Include="Examples\3-LiskovSubstitution\IWalker.cs" />
+    <Compile Include="Examples\4-InterfaceSegregation\IPlayer.cs" />
+    <Compile Include="Examples\4-InterfaceSegregation\IStriker.cs" />
+    <Compile Include="Examples\4-InterfaceSegregation\IGoalKeeper.cs" />
+    <Compile Include="Examples\4-InterfaceSegregation\Striker.cs" />
+    <Compile Include="Examples\4-InterfaceSegregation\GoalKeeper.cs" />
+    <Compile Include="Examples\5-DependencyInversion\ProductManager.cs" />
+    <Compile Include="Examples\5-DependencyInversion\IUretim.cs" />
+    <Compile Include="Examples\5-DependencyInversion\Tractor.cs" />
+    <Compile Include="Examples\5-DependencyInversion\Motorcycle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Examples\" />
+    <Folder Include="Examples\1-SingleResponsibility\" />
+    <Folder Include="Examples\2-OpenClosed\" />
+    <Folder Include="Examples\3-LiskovSubstitution\" />
+    <Folder Include="Examples\4-InterfaceSegregation\" />
+    <Folder Include="Examples\5-DependencyInversion\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
