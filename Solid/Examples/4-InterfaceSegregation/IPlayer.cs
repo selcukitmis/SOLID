@@ -1,7 +1,9 @@
 ﻿using System;
 namespace Solid.Examples.InterfaceSegregation
 {
-    public enum IPlayer
+    public interface IPlayer
     {
+        void GivePass();
+        void PutOnStrip();
     }
 }
